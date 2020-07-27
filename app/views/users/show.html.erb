@@ -1,0 +1,26 @@
+<section class="section">
+  <div id="marginless" class="row">
+    <div class="offset-sm-1 col-sm-2 text-center">
+      <div>
+        <figure>
+          <%= attachment_image_tag @user, :profile_image, :fill, 1000, 1000,fallback: "no-image.png" %>
+        </figure>
+      </div>
+    </div>
+    <div class="col-sm-5 mb-3" id="target">
+      <div class="row mb-3 ml-0">
+        <div class="col-md-2 mr-4 p-0 h4"><%= @user.name %></div>
+        <div class="col-md-4 h5 m-1">
+            <%= @user.email %>
+        </div>
+      </div>
+      <div><%= @user.address %></div>
+      <div><%= @user.profile %></div>
+    </div>
+    <div class="col-sm-4 mb-3">
+      <%= link_to 'Delete', user_path(@user), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+    </div>
+  </div>
+</section>
+
+

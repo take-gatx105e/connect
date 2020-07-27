@@ -14,3 +14,18 @@
  *= require_self
  */
  
+.profile_image {
+  border-radius: 50%;
+  width: 70%;
+  height: 70%;
+}
+
+@media screen and (min-width: 576px) {
+    /*576px以上で適用する内容*/
+  .container {
+    max-width: 1920px;
+  }
+  .row {
+    margin: 24px;
+  }
+}
