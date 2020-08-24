@@ -14,6 +14,13 @@
  *= require_self
  */
  
+.navbar {
+  z-index: 1;
+  background: #0df;
+  color: lime;
+  opacity: 0.7;
+}
+ 
 .profile_image {
   border-radius: 50%;
   width: 70%;
@@ -28,4 +35,75 @@
   .row {
     margin: 24px;
   }
+}
+
+@media screen and (max-width:575px) {
+  /*575px以下で適用する内容*/
+  #target {
+    text-align: center;
+  }
+  #target1 {
+    justify-content: center;
+  }
+  .user_name {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+.pagination {
+  justify-content: end;
+}
+
+.chatroom {
+  font-family: "Open sans", sans-serif;
+}
+
+.update {
+  font-size: 12px;
+}
+
+.top {
+  position: relative;
+}
+
+/*.top,*/
+.video_container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.video_container {
+  /*background-color: lime;*/
+  /*background-image: none;*/
+  /*background-size: cover;*/
+  /*background-position: center;*/
+}
+
+.video_tag {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.video_sidebar {
+  position: absolute;
+/*  top: 50%;*/
+/*  left: 0;*/
+  overflow: hidden;
+/*  -webkit-transform: translateY(-50%);*/
+/*  transform: translateY(-50%);*/
+/*  width: 100%;*/
+  /*height: 100%;*/
+  /*background-color: rgba(255, 255, 255, 0.8); */
+}
+
+.overflowh {
+  overflow: hidden;
 }

@@ -1,44 +1,62 @@
-<h4>気になる同士</h4>
-<div class="row">
-<% @entries.each do |e| %>
-<div class="col-sm-5 mb-4">
-  <div class="user_name">
-    <strong>
-      <div>
-        <figure>
-          <%= attachment_image_tag e.user, :profile_image, :fill, 1000, 1000,fallback: "no-image.png" %>
-        </figure>
-      </div>
-      <a class="rooms-user-link" href="/users/<%= e.user.id %>">
-        <%= e.user.name %>さん
-      </a>
-    </strong>
+<div class="overflowh pl-3 pr-3">
+<!--スクロールバーを隠す為。-->
+  <div class="chatroom m-5" id="target">
+    <h1>Chat room</h1>
   </div>
-  </div>
-<% end %>
-</div>
-
-
-<hr>
-
-<div class="row">
   
-
-<% if @messages.present? %>
-  <% @messages.each do |m| %>
-<div class="col-sm-4">
-    <%= attachment_image_tag m.user, :profile_image, :fill, 1000, 1000,fallback: "no-image.png" %>
-    <strong><%= m.content %></strong>
-    <time><%= m.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
-</div>
-  <% end %>
-<% end %>
-
-<div class="posts col-sm-8 m-3">
-<%= form_for @message do |f| %>
-  <%= f.text_field :content, placeholder: "メッセージを入力して下さい。", size: 70, class:"form-text-field" %>
-  <%= f.hidden_field :room_id, value: @room.id %>
-  <%= f.submit "投稿", class: "form_submit" %>
-<% end %>
-</div>
+  <div class="row">
+    <% @entries.each do |e| %>
+      <div class="col-sm-6 pl-3 pr-3">
+        <div class="card mb-3">
+          
+          <div id="target" class="user_name row">
+            <!--<strong>-->
+              <div id="" class="offset-2 col-8 offset-sm-0 col-sm-5 text-center p-0" >
+                <figure class="image">
+                  <%= link_to user_path(e.user) do %>
+                    <%= attachment_image_tag e.user, :profile_image, :fill, 1000, 1000,fallback: "no-image.png" %>
+                  <% end %>
+                </figure>
+              </div>
+              <div class="col-sm-6 p-0">
+                <div class="card_body">
+                  <div class="mt-1 mb-3 h4">
+                    <a class="rooms-user-link" href="/users/<%= e.user.id %>">
+                      <%= e.user.name %> さん
+                    </a>
+                  </div>
+                  <div class="mb-3"><%= e.user.address %></div>
+                  <div class="mb-3"><%= e.user.profile %></div>
+                </div>
+              </div>
+            <!--</strong>-->
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  
+  
+  <hr class="mb-5">
+  
+  
+  <div id="messages" class="" data-room_id="<%= @room.id %>">
+    <!--<ul class="list-group">-->
+      <%= render @messages %>
+    <!--</ul>-->
+  </div>
+  <!--<div class="pagination justify-content-end p-3">-->
+    <!--<p>< paginate @messages ></p>-->
+  <!--</div>-->
+  
+  <form class="">
+    <div class="form-group row posts mb-5 mr-0">
+      <div class="offset-sm-4 col-sm-6 mb-1 pr-0">
+        <input type="text" id="chat-input" class="form-control" data-behavior="room_speaker">
+      </div>
+      <div class="col-sm-2 text-right text-sm-left pr-0">
+        <button id="button" type="submit" class="btn btn-primary btn-sm m-1">送信</button>
+      </div>
+    </div>
+  </form>
 </div>
