@@ -1,9 +1,9 @@
 <div class="video_container">
-  <%= video_tag "/assets/videos/video01.mp4", class: "video_tag", loop: true, autoplay: true, muted: true, width: "", height: "" %>
+  <%= video_tag "/assets/videos/video01.mp4", class: "video_tag", loop: true, autoplay: true, muted: true %>
 </div>
 
 <div class="video_sidebar">
-  <div class="text-center m-5">
+  <div class="text-center m-5 pt-5">
     <h1>マイページ</h1>
   </div>
   
@@ -71,7 +71,7 @@
                     <%= fields_for @entry do |e| %>
                       <%= e.hidden_field :user_id, value: @user.id %>
                     <% end %>
-                    <%= f.submit "チャットを始める", class: "btn btn-primary btn-sm user-show-chat", style: "width:100%;" %>
+                    <%= f.submit "チャットを始める", class: "btn btn-primary btn-sm user-show-chat" %>
                   <% end %>
                 <% end %>
               <% end %>
