@@ -29,7 +29,7 @@ document.addEventListener('turbolinks:load', function() {
     }
   });
   
-  // ボタンをクリックしたら送信に変更。
+  // enterキーを押したら送信に変更。
   // $('#chat-input').on('keypress', function(event) {
   //   if (event.keyCode === 13) {
   //     App.room.speak(event.target.value);
@@ -38,6 +38,7 @@ document.addEventListener('turbolinks:load', function() {
   //   }
   // });
   
+  // ボタンをクリックしたら送信に変更。
   // document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('chat-input');
     const button = document.getElementById('button');
@@ -49,7 +50,7 @@ document.addEventListener('turbolinks:load', function() {
       input.value = '';
       return event.preventDefault();
       // 画面遷移を中断する。
-      console.log('aaa');
+      // console.log('aaa');
     });
   }
   // }, false);
