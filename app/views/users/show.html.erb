@@ -3,11 +3,16 @@
 </div>
 
 <div class="video_sidebar">
+  <!--flashにメッセージが入っていれば、pt-5を追加。-->
+  <% if flash[:success] %>
+    <div class="pt-5"></div>
+  <% end %>
+  
   <div class="text-center m-5 pt-5">
     <h1>マイページ</h1>
   </div>
   
-  <section class="section">
+  <!--<section class="section">-->
     <div class="row">
       <div class="offset-2 col-8 offset-sm-1 col-sm-2 text-center">
         <!--<div id="target">-->
@@ -81,9 +86,8 @@
       </div>
   
     </div>
-  </section>
+  <!--</section>-->
 </div>
-
 
 
 

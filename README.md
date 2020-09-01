@@ -1,24 +1,50 @@
-# README
+# Connect
+* オリジナルマッチングアプリ
+* あなたのご自慢のにゃんこを紹介してください！
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 機能一覧
+* ユーザ登録機能
+* ログイン機能
+* 画像投稿機能
+* フォロー機能
+* リアルタイムチャット機能
 
-Things you may want to cover:
+## 技術一覧
+* 開発はMySQL、AWSを使用し、本番はPostgreSQL、Herokuを使用。
+* セッション管理は、Railsが用意しているSessionシステムによる。
+* リアルタイムチャット機能を実装する為、ActionCableを使用。
+* 画像アップロードには、refileを使用。
+* herokuにアップした画像に関しては、AWSのs3にバケットを準備して保存。
+* 環境変数にはcredentials.ymlを使用。
 
-* Ruby version
+    ruby 2.6.3  
+    rails 5.2.2  
+    mysql2 0.5.3  
+    bootsnap 1.4.7 
+    refile 0.6.0  
+    refile-mini_magick 0.2.0  
+    refile-s3 0.2.0
+    jquery-rails 4.4.0
 
-* System dependencies
 
-* Configuration
+## サイトマップ・ワイヤーフレーム・データベース図
+ &emsp; https://cacoo.com/diagrams/ulzu7mGBwtokcpkW/24DD9
 
-* Database creation
+## 使用方法
+* 新規登録画面よりユーザ登録をしていただいた後、ログインされることによりご利用いただけます。
+* ユーザについて、一覧・詳細画面があり、新規登録・編集・削除ができるようになっています。
+* マイページ画面に表示されるメールアドレスにつきましては、ログインされているユーザのアドレスのみが表示されるようになっており、他のユーザからは見れないようになっています。
+* フォロー機能について
+  * マイページ画面のフォローボタンより、フォロー・アンフォローを行えます。
+  * 特定のユーザと相互フォローの状態になるとマイページ画面にチャットのボタンが表示されるようになり、リアルタイムチャットを行うことができます。
+  * フォロー中のユーザ・フォロワーについてそれぞれ一覧画面により確認できます。
 
-* Database initialization
+## ライセンス
+ &emsp; "Connect" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+ 
+## 謝辞
+ &emsp; 有益な情報を提供して頂きましたエンジニアの皆様へ、ありがとうございました。
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 制作
+* sakai
+* twitter: https://twitter.com/natsuKageT

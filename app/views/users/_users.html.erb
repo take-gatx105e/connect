@@ -13,7 +13,7 @@
         <div class="card_body mb-3">
           <div><h3><%= link_to user.name, user_path(user) %></h3></div>
           <div>
-            投稿数：あとで
+            投稿数：<span><%= user.messages.count %></span>
           </div>
         </div>
       </div>
