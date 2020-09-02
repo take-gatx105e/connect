@@ -1,6 +1,6 @@
 # Connect
-* オリジナルマッチングアプリ
-* あなたのご自慢のにゃんこを紹介してください！
+* オリジナルマッチングアプリ❤️
+* ClariS の コネクトって、やっぱり名曲ですよね！w
 
 ## 機能一覧
 * ユーザ登録機能
@@ -8,14 +8,15 @@
 * 画像投稿機能
 * フォロー機能
 * リアルタイムチャット機能
+* ページネーション機能
 
 ## 技術一覧
 * 開発はMySQL、AWSを使用し、本番はPostgreSQL、Herokuを使用。
 * セッション管理は、Railsが用意しているSessionシステムによる。
-* リアルタイムチャット機能を実装する為、ActionCableを使用。
 * 画像アップロードには、refileを使用。
 * herokuにアップした画像に関しては、AWSのs3にバケットを準備して保存。
 * 環境変数にはcredentials.ymlを使用。
+* リアルタイムチャット機能を実装する為、ActionCableを使用。
 
     ruby 2.6.3  
     rails 5.2.2  
@@ -25,10 +26,11 @@
     refile-mini_magick 0.2.0  
     refile-s3 0.2.0
     jquery-rails 4.4.0
+    kaminari 1.2.1
 
 
-## サイトマップ・ワイヤーフレーム・データベース図
- &emsp; https://cacoo.com/diagrams/ulzu7mGBwtokcpkW/24DD9
+## サイトマップ・データベース図
+ &emsp; https://cacoo.com/diagrams/F2ePY1CwDNGFsx0D/24DD9
 
 ## 使用方法
 * 新規登録画面よりユーザ登録をしていただいた後、ログインされることによりご利用いただけます。

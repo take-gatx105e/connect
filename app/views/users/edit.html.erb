@@ -1,7 +1,7 @@
 <div class="overflowh">
 <!--スクロールバーを隠す為。-->
   <div class="text-center mt-4">
-    <h1>Edit</h1>
+    <h1>ユーザ編集</h1>
   </div>
   
   <div class="row pl-3 pr-3 mb-4">
@@ -11,41 +11,41 @@
         <%= render 'layouts/error_messages', model: f.object %>
         
         <div class="form-group">
-          <%= f.label :name, 'Name' %>
+          <%= f.label :name, '名前' %>
           <%= f.text_field :name, class: 'form-control' %>
         </div>
         
         <div class="form-group">
-          <%= f.label :address, 'Address' %>
+          <%= f.label :address, '所在' %>
           <%= f.text_field :address, class: 'form-control' %>
         </div>
         
         <div class="form-group">
-          <%= f.label :profile, 'Profile' %>
+          <%= f.label :profile, 'プロフィール' %>
           <%= f.text_area :profile, class: 'form-control' %>
         </div>
         
         <div class="form-group">
-          <%= f.label :profile_image, 'ProfileImage' %>
+          <%= f.label :profile_image, 'プロフィール画像' %>
           <%= f.attachment_field :profile_image, class: 'form-control' %>
         </div>
   
         <div class="form-group">
-          <%= f.label :email, 'Email' %>
+          <%= f.label :email, 'メールアドレス' %>
           <%= f.email_field :email, class: 'form-control' %>
         </div>
   
         <div class="form-group">
-          <%= f.label :password, 'Password' %>
+          <%= f.label :password, 'パスワード' %>
           <%= f.password_field :password, class: 'form-control' %>
         </div>
   
         <div class="form-group">
-          <%= f.label :password_confirmation, 'Confirmation' %>
+          <%= f.label :password_confirmation, 'パスワード確認' %>
           <%= f.password_field :password_confirmation, class: 'form-control' %>
         </div>
   
-        <%= f.submit 'Edit', class: 'btn btn-primary btn-block' %>
+        <%= f.submit '編 集', class: 'btn btn-primary btn-block' %>
       <% end %>
     </div>
   </div>
